@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_msg_1">
+
+        <CheckBoxPreference
+            android:title="@string/settings_msg_2"
+            android:summary="@string/settings_msg_3"
+            android:key="disable_splash_screen"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_msg_4">
+
+        <CheckBoxPreference
+            android:title="@string/settings_msg_5"
+            android:summary="@string/settings_msg_6"
+            android:key="disable_notifications"/>
+
+        <CheckBoxPreference
+            android:title="@string/settings_msg_7"
+            android:summary="@string/settings_msg_8"
+            android:key="disable_multiple_notifications"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_msg_9">
+
+        <EditTextPreference
+            android:dialogTitle="@string/app_name"
+            android:title="@string/settings_msg_10"
+            android:dialogMessage="@string/settings_msg_11"
+            android:summary="@string/settings_msg_12"
+            android:singleLine="true"
+            android:inputType="number"
+            android:key="terminal_portnumber"/>
+
+        <ListPreference
+            android:title="@string/settings_msg_13"
+            android:summary="@string/settings_msg_14"
+            android:entries="@array/terminal_fontsize"
+            android:entryValues="@array/terminal_fontsize"
+            android:key="terminal_font"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_msg_15">
+
+        <EditTextPreference
+            android:dialogTitle="@string/app_name"
+            android:title="@string/settings_msg_16"
+            android:dialogMessage="@string/settings_msg_17"
+            android:summary="@string/settings_msg_18"
+            android:singleLine="true"
+            android:key="remote_device_name"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_msg_19">
+
+        <EditTextPreference
+            android:dialogTitle="@string/app_name"
+            android:title="@string/settings_msg_20"
+            android:dialogMessage="@string/settings_msg_21"
+            android:summary="@string/settings_msg_22"
+            android:singleLine="true"
+            android:key="webcam_stream"/>
+
+        <CheckBoxPreference
+            android:title="@string/settings_msg_23"
+            android:summary="@string/settings_msg_24"
+            android:key="webcam_fps"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

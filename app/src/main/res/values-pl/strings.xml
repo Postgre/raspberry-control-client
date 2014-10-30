@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <!-- Common messages -->
+
+    <string name="com_msg_1">"Połącz ponownie"</string>
+    <string name="com_msg_2">"W celu zamknięcia aplikacji wybierz przycisk 'Zakończ'"</string>
+    <string name="com_msg_3">"Wiadomość z serwera: "</string>
+    <string name="com_msg_4">"Nieznany"</string>
+    <string name="com_msg_5">"Zatwierdź"</string>
+    <string name="com_msg_6">"Anuluj"</string>
+    <string name="com_msg_7">"Przyciski multimedialne"</string>
+    <string name="com_msg_8">"Przyciski funkcyjne"</string>
+    <string name="com_msg_9">"Raspberry Pi GPIO - schemat"</string>
+    <string name="com_msg_10">"Błąd"</string>
+
+    <!-- Error messages -->
+
+    <string name="error_msg_1">"Połączenie zamknięte"</string>
+    <string name="error_msg_2">"Otrzymany obiekt JSON jest niepoprawny - zgłoś błąd aplikacji"</string>
+    <string name="error_msg_3">"Brak połączenia do serwera - wybierz przycisk 'Połącz ponownie'"</string>
+    <string name="error_msg_4">"Serwer nie odpowiada - spróbuj ponownie"</string>
+    <string name="error_msg_5">"Aktualnie jesteś podłączony do serwera"</string>
+    <string name="error_msg_6">"Brak połączenia do serwera - sprawdź ustawienia sieci i status serwera"</string>
+    <string name="error_msg_7">"Nie mogę znaleźć czujników temperatury na magistrali 1-wire"</string>
+    <string name="error_msg_8">"Nie mogę znaleźć wyeksportowanych portów GPIO"</string>
+    <string name="error_msg_9">"Lista procesów jest pusta - zgłoś błąd aplikacji"</string>
+    <string name="error_msg_10">"Nazwa zdalnego urządzenia nie jest ustawiona - sprawdź ustawienia aplikacji"</string>
+    <string name="error_msg_11">"Nie mogę odczytać danych - adres źródła jest nieprawidłowy, sprawdź ustawienia aplikacji"</string>
+
+    <!-- MainMenu -->
+
+    <string-array name="mainmenu_options">
+        <item>"Sterowanie portami GPIO"</item>
+        <item>"Czujniki temperatury"</item>
+        <item>"Zarządzanie procesami"</item>
+        <item>"Monitorowanie zasobów"</item>
+        <item>"Emulator terminala"</item>
+        <item>"Zdalne sterowanie IR"</item>
+        <item>"Zdalny monitoring"</item>
+        <item>"Ustawienia"</item>
+        <item>"O 'Raspberry Control'"</item>
+        <item>"Licencje Open Source"</item>
+        <item>"Zakończ"</item>
+    </string-array>
+
+    <string-array name="mainmenu_descriptions">
+        <item>"Wyświetl listę oraz zarządzaj stanem dostępnych wyprowadzeń GPIO"</item>
+        <item>"Odczytaj dane z czujników temperatury podłączonych do magistrali 1-wire"</item>
+        <item>"Wyświetl oraz zarządzaj listą procesów uruchomionych po stronie serwera"</item>
+        <item>"Monitoruj wybrane parametry serwera, m.in. obciążenie i temperaturę procesora, ..."</item>
+        <item>"Kontroluj pracę zdalnego serwera z poziomu interfejsu wiersza poleceń"</item>
+        <item>"Steruj zdalnie zdefiniowanymi urządzeniami za pomocą modułu podczerwieni"</item>
+        <item>"Wyświetl obraz ze zdefinowanych kamer za pomocą wbudowanego klienta MJPG"</item>
+        <item>"Skonfiguruj aplikację według własnych preferencji (powiadomienia, adresy, ...)"</item>
+        <item>"Wyświetl dodatkowe informacje dotyczące aplikacji 'Raspberry Control'"</item>
+        <item>"Wyświetl listę z licencjami wszystkim komponentów otwartoźródłowych"</item>
+        <item>"Zamknij połączenie oraz aplikację. Użyj przycisku HOME by przenieść aplikację w tło"</item>
+    </string-array>
+
+    <!-- Settings -->
+
+    <string name="settings_msg_1">"Ustawienia ogólne"</string>
+    <string name="settings_msg_2">"Wyłącz ekran powitalny"</string>
+    <string name="settings_msg_3">"Przejdź bezpośrednio do ekranu logowania po starcie aplikacji"</string>
+
+    <string name="settings_msg_4">"Powiadomienia"</string>
+    <string name="settings_msg_5">"Wyłącz powiadomienia"</string>
+    <string name="settings_msg_6">"Zablokuj powiadomienia wysyłane z serwera"</string>
+    <string name="settings_msg_7">"Wyłącz wielokrotne powiadomienia"</string>
+    <string name="settings_msg_8">"Wyświetlaj wyłącznie ostatnie odebrane powiadomienie"</string>
+
+    <string name="settings_msg_9">"Emulator terminala"</string>
+    <string name="settings_msg_10">"Numer portu shellinabox"</string>
+    <string name="settings_msg_11">"Ustaw numer portu dla modułu shellinabox"</string>
+    <string name="settings_msg_12">"Ustaw numer portu dla modułu shellinabox"</string>
+    <string name="settings_msg_13">"Rozmiar czcionki"</string>
+    <string name="settings_msg_14">"Ustaw rozmiar czcionki dla modułu emulatora terminala"</string>
+
+    <string name="settings_msg_15">"Zdalne sterowanie IR"</string>
+    <string name="settings_msg_16">"Nazwa urządzenia"</string>
+    <string name="settings_msg_17">"Ustaw nazwę urządzenia na podstawie konfiguracji z pliku lircd.conf\n\nNa przykład:\nSAMSUNG_AA59-00600A"</string>
+    <string name="settings_msg_18">"Ustaw nazwę urządzenia na podstawie konfiguracji z pliku lircd.conf"</string>
+
+    <string name="settings_msg_19">"Ustawienia monitoringu"</string>
+    <string name="settings_msg_20">"Adres 'MJPG-streamer'"</string>
+    <string name="settings_msg_21">"Ustaw adres dla modułu 'MJPG-streamer'\n\nNa przykład:\nhttp://192.168.0.2:8082/?action=stream"</string>
+    <string name="settings_msg_22">"Ustaw adres źródła danych dla klienta MJPG"</string>
+    <string name="settings_msg_23">"Pokaż etykietę FPS"</string>
+    <string name="settings_msg_24">"Wyświetlaj informację z liczbą FPS (ang. Frames Per Second)"</string>
+
+    <!-- TempSensors -->
+
+    <string name="tempsensor_label_1">"ID czujnika: "</string>
+    <string name="tempsensor_label_2">"Temperatura: "</string>
+    <string name="tempsensor_label_3">"Suma CRC: "</string>
+
+    <!-- ResourcesMonitor -->
+
+    <string name="resources_label_1">"INFORMACJE O SYSTEMIE"</string>
+    <string name="resources_label_1_1">"Kernel: "</string>
+    <string name="resources_label_1_2">"Uptime: "</string>
+    <string name="resources_label_1_3">"Serial No.: "</string>
+    <string name="resources_label_1_4">"MAC Address: "</string>
+
+    <string name="resources_label_2">"SYSTEM PLIKÓW"</string>
+    <string name="resources_label_2_1">"Used space: "</string>
+    <string name="resources_label_2_2">"Free space: "</string>
+
+    <string name="resources_label_3">"PAMIĘCI RAM/SWAP"</string>
+    <string name="resources_label_3_1">"RAM Usage: "</string>
+    <string name="resources_label_3_2">"SWAP Usage: "</string>
+
+    <string name="resources_label_4">"STATYSTYKI PROCESORA"</string>
+    <string name="resources_label_4_1">"Avg. Load: "</string>
+    <string name="resources_label_4_2">"CPU Temp.: "</string>
+    <string name="resources_label_4_3">"CPU Usage: "</string>
+
+    <!-- Login -->
+
+    <string name="login_ip">"Nazwa serwera lub numer IP:"</string>
+    <string name="login_port">"Numer portu:"</string>
+    <string name="login_timeout">"Czas oczekiwania na połączenie [ms]:"</string>
+    <string name="login_btn_conect">"Połącz"</string>
+
+    <!-- Processes -->
+
+    <string name="processes_msg_1">"Czy chcesz zakończyć wybrany proces?"</string>
+    <string name="processes_msg_2">"Zakończ proces: "</string>
+
+    <!-- RemoteControl -->
+
+    <string name="ir_msg_1">"Przypisz nową funkcję do wybranego przycisku:"</string>
+    <string name="ir_msg_2">"Przypisz nową funkcję"</string>
+
+    <!-- Webcam -->
+
+    <string name="webcam_msg_1">"DEMO\n\nAdres źródła jest nieustawiony - sprawdź ustawienia aplikacji"</string>
+    <string name="webcam_msg_2">"Podłączony do:\n\n"</string>
+    <string name="webcam_msg_3">"\n\nW przypadku 'czarnego ekranu' sprawdź ponownie ustawiony adres źródła danych"</string>
+
+    <!-- Processes (don't translate this part) -->
+
+    <string name="processes_label_1">"PID: "</string>
+    <string name="processes_label_2">"USER: "</string>
+
+    <!-- RemoteControl (don't translate this part) -->
+
+    <string name="ir_txt_00">TXT</string>
+    <string name="ir_txt_01">HELP</string>
+    <string name="ir_txt_02">PWR</string>
+    <string name="ir_txt_03">1</string>
+    <string name="ir_txt_04">2</string>
+    <string name="ir_txt_05">3</string>
+    <string name="ir_txt_06">4</string>
+    <string name="ir_txt_07">5</string>
+    <string name="ir_txt_08">6</string>
+    <string name="ir_txt_09">7</string>
+    <string name="ir_txt_10">8</string>
+    <string name="ir_txt_11">9</string>
+    <string name="ir_txt_12">*</string>
+    <string name="ir_txt_13">0</string>
+    <string name="ir_txt_14">#</string>
+    <string name="ir_txt_15">UP</string>
+    <string name="ir_txt_16">LEFT</string>
+    <string name="ir_txt_17">OK</string>
+    <string name="ir_txt_18">RIGHT</string>
+    <string name="ir_txt_19">DOWN</string>
+    <string name="ir_txt_20">EPG</string>
+    <string name="ir_txt_21">INFO</string>
+    <string name="ir_txt_22">MENU</string>
+    <string name="ir_txt_23">V+</string>
+    <string name="ir_txt_24">MUTE</string>
+    <string name="ir_txt_25">CH+</string>
+    <string name="ir_txt_26">V-</string>
+    <string name="ir_txt_27">BACK</string>
+    <string name="ir_txt_28">CH-</string>
+    <string name="ir_txt_29">REW</string>
+    <string name="ir_txt_30">PLAY</string>
+    <string name="ir_txt_31">FF</string>
+    <string name="ir_txt_32">REC</string>
+    <string name="ir_txt_33">||</string>
+    <string name="ir_txt_34">STOP</string>
+    <string name="ir_txt_35">F1</string>
+    <string name="ir_txt_36">F2</string>
+    <string name="ir_txt_37">F3</string>
+    <string name="ir_txt_38">F4</string>
+    <string name="ir_txt_39">F5</string>
+    <string name="ir_txt_40">F6</string>
+    <string name="ir_txt_41">F7</string>
+    <string name="ir_txt_42">F8</string>
+    <string name="ir_txt_43">F9</string>
+
+    <!-- Other (don't translate this part) -->
+
+    <string name="app_name">"Raspberry Control"</string>
+    <string name="splash_title_1">"                              "</string>
+    <string name="splash_title_2">"                              "</string>
+    <string name="image_desc">"Logo"</string>
+
+    <string-array name="terminal_fontsize">
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
+</resources>

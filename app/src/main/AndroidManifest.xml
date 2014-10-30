@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skalski.raspberrycontrol" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="com.skalski.raspberrycontrol.Custom_WebSocketClient">
+
+        <activity
+            android:name="com.skalski.raspberrycontrol.Activity_SplashSpotlight"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity 
+            android:name="com.skalski.raspberrycontrol.Activity_Login"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        
+        <activity
+            android:name="com.skalski.raspberrycontrol.Activity_MainMenu"
+            android:theme="@style/TransparentTheme">
+        </activity>
+        
+        <activity
+            android:name="com.skalski.raspberrycontrol.Activity_ReadMe"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <activity android:name="com.skalski.raspberrycontrol.Activity_GPIO" />
+        <activity android:name="com.skalski.raspberrycontrol.Activity_TempSensors" />
+        <activity android:name="com.skalski.raspberrycontrol.Activity_Processes" />
+        <activity android:name="com.skalski.raspberrycontrol.Activity_ResourcesMonitor" />
+        <activity android:name="com.skalski.raspberrycontrol.Activity_RemoteControl" />
+        <activity android:name="com.skalski.raspberrycontrol.Activity_Terminal" android:screenOrientation="portrait" />
+        <activity android:name="com.skalski.raspberrycontrol.Activity_Webcam" />
+        <activity android:name="com.skalski.raspberrycontrol.Activity_Settings" />
+
+    </application>
+</manifest>

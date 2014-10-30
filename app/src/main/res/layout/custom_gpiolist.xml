@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+
+    <TextView
+        style="@style/AppTextStyle"
+        android:id="@+id/gpio_name_label"
+        android:text="@string/com_msg_4"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        style="@style/AppButtonStyle"
+        android:id="@+id/gpio_button_direction"
+        android:layout_toRightOf="@+id/gpio_name_label"
+        android:background="@drawable/button_green"
+        android:text="@string/com_msg_10"/>
+
+    <Button
+        style="@style/AppButtonStyle"
+        android:id="@+id/gpio_button_value"
+        android:layout_toRightOf="@+id/gpio_button_direction"
+        android:background="@drawable/button_yellow"
+        android:text="@string/com_msg_10"/>
+
+</RelativeLayout>

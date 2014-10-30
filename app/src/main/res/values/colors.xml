@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    
+    <!-- Activity_MainMenu -->
+    <color name="actionbar_title_color">@android:color/white</color>
+
+    <!-- SwipeRefreshLayout -->
+    <color name="swipe_color_1">#ffa5c63b</color>
+    <color name="swipe_color_2">#ffeda61a</color>
+    <color name="swipe_color_3">#ff12ffa0</color>
+    <color name="swipe_color_4">#ffaa0000</color>
+    
+</resources>

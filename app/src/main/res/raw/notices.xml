@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<notices>
+    <notice>
+        <name>NotBoringActionBar</name>
+        <url>https://github.com/flavienlaurent/NotBoringActionBar</url>
+        <copyright>Copyright 2013 Flavien Laurent</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>SuperToasts</name>
+        <url>https://github.com/JohnPersano/SuperToasts</url>
+        <copyright>Copyright 2014 John Persano</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Update Checker</name>
+        <url>https://github.com/rampo/UpdateChecker</url>
+        <copyright>Copyright 2014 Pietro Rampini</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>HoloGraphLibrary</name>
+        <url>http://danielnadeau.blogspot.com/</url>
+        <copyright>Copyright Daniel Nadeau</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Android Sliding Up Panel</name>
+        <url>https://github.com/umano/AndroidSlidingUpPanel</url>
+        <copyright>Copyright The Android Open Source Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>SecureWebSockets</name>
+        <url>https://github.com/palmerc/SecureWebSockets</url>
+        <copyright>Copyright 2014 Cameron Lowell Palmer</copyright>
+        <license>MIT License</license>
+    </notice>
+    <notice>
+        <name>Crystal Clear Icons</name>
+        <url>http://www.everaldo.com</url>
+        <copyright>Copyright Everaldo Coelho</copyright>
+        <license>GNU Lesser General Public License 2.1</license>
+    </notice>
+</notices>

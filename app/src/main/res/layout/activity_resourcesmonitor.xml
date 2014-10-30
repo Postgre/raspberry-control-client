@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dip" >
+
+        <View
+            android:id="@+id/res_hrline_00"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentTop="true"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/res_system_information"
+            android:text="@string/resources_label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/res_hrline_00"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/res_kernel"
+            android:text="@string/resources_label_1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_system_information"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_kernel_value"
+            android:text="@string/com_msg_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/res_uptime"
+            android:layout_alignLeft="@+id/res_mac_value" />
+
+        <TextView
+            android:id="@+id/res_uptime"
+            android:text="@string/resources_label_1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_kernel"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_uptime_value"
+            android:text="@string/com_msg_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/res_serial"
+            android:layout_alignLeft="@+id/res_mac_value" />
+
+        <TextView
+            android:id="@+id/res_serial"
+            android:text="@string/resources_label_1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_uptime"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_serial_value"
+            android:text="@string/com_msg_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/res_mac"
+            android:layout_alignLeft="@+id/res_mac_value" />
+
+        <TextView
+            android:id="@+id/res_mac"
+            android:text="@string/resources_label_1_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_serial"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_mac_value"
+            android:text="@string/com_msg_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/res_mac"
+            android:layout_alignBottom="@+id/res_mac"
+            android:layout_toRightOf="@+id/res_mac"
+            android:layout_marginLeft="20dp" />
+
+        <View
+            android:id="@+id/res_hrline_01"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/res_mac"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/res_filesystem"
+            android:text="@string/resources_label_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/res_hrline_01"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <com.echo.holographlibrary.PieGraph
+            android:id="@+id/res_filesystem_usage_graph"
+            android:layout_below="@+id/res_filesystem"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:id="@+id/res_filesystem_used_space"
+            android:text="@string/resources_label_2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_filesystem_usage_graph"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_filesystem_used_space_value"
+            android:text="@string/com_msg_4"
+            android:textColor="#99CC00"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/res_filesystem_free_space"
+            android:layout_alignLeft="@+id/res_mac_value" />
+
+        <TextView
+            android:id="@+id/res_filesystem_free_space"
+            android:text="@string/resources_label_2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_filesystem_used_space"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_filesystem_free_space_value"
+            android:text="@string/com_msg_4"
+            android:textColor="#AA66CC"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/res_filesystem_free_space"
+            android:layout_alignLeft="@+id/res_uptime_value"/>
+
+        <View
+            android:id="@+id/res_hrline_02"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/res_filesystem_free_space"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/res_memory_head"
+            android:text="@string/resources_label_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/res_hrline_02"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/res_memory_ram"
+            android:text="@string/resources_label_3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_memory_head"
+            android:textStyle="bold" />
+
+        <com.skalski.raspberrycontrol.Custom_ProgressBar
+            android:id="@+id/res_memory_ram_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/res_memory_ram"
+            android:layout_alignLeft="@+id/res_mac_value"
+            android:progress="50"
+            android:max="100"
+            style="@android:style/Widget.ProgressBar.Horizontal" />
+
+        <TextView
+            android:id="@+id/res_memory_swap"
+            android:text="@string/resources_label_3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_memory_ram_value"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <com.skalski.raspberrycontrol.Custom_ProgressBar
+            android:id="@+id/res_memory_swap_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/res_memory_swap"
+            android:layout_alignLeft="@+id/res_mac_value"
+            android:progress="50"
+            android:max="100"
+            style="@android:style/Widget.ProgressBar.Horizontal" />
+
+        <View
+            android:id="@+id/res_hrline_03"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/res_memory_swap"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/res_cpu_usage_head"
+            android:text="@string/resources_label_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/res_hrline_03"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/res_cpu_avg_load"
+            android:text="@string/resources_label_4_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_cpu_usage_head"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_cpu_avg_load_value"
+            android:text="@string/com_msg_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/res_cpu_temp"
+            android:layout_alignLeft="@+id/res_mac_value" />
+
+        <TextView
+            android:id="@+id/res_cpu_temp"
+            android:text="@string/resources_label_4_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_cpu_avg_load"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_cpu_temp_value"
+            android:text="@string/com_msg_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/res_cpu_usage"
+            android:layout_alignLeft="@+id/res_mac_value" />
+
+        <TextView
+            android:id="@+id/res_cpu_usage"
+            android:text="@string/resources_label_4_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/res_cpu_temp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res_cpu_usage_value"
+            android:text="@string/com_msg_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/res_cpu_usage"
+            android:layout_alignLeft="@+id/res_mac_value" />
+
+        <View
+            android:id="@+id/res_hrline_04"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/res_cpu_usage"
+            android:background="#000000" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ ~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+ ~
+ ~ This file is part of Raspberry Control.
+ ~
+ ~ Raspberry Control is free software: you can redistribute it and/or modify
+ ~ it under the terms of the GNU General Public License as published by
+ ~ the Free Software Foundation, either version 3 of the License, or
+ ~ (at your option) any later version.
+ ~
+ ~ Raspberry Control is distributed in the hope that it will be useful,
+ ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ ~ GNU General Public License for more details.
+ ~
+ ~ You should have received a copy of the GNU General Public License
+ ~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"   
+    android:layout_gravity="center"
+    android:padding="10dp" >
+
+    <GridLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:columnCount="3"
+      android:orientation="horizontal" >
+
+      <Button android:id="@+id/button00" android:text="@string/ir_txt_00" style="@style/AppButtonStyle"
+              android:tag="KEY_TXT" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button01" android:text="@string/ir_txt_01" style="@style/AppButtonStyle"
+              android:tag="KEY_HELP" android:background="@drawable/button_green" />
+      <Button android:id="@+id/button02" android:text="@string/ir_txt_02" style="@style/AppButtonStyle"
+              android:tag="KEY_POWER" android:background="@drawable/button_red" />
+
+      <TextView android:layout_column="1" android:layout_columnSpan="2" />
+
+      <Button android:id="@+id/button03" android:text="@string/ir_txt_03" style="@style/AppButtonStyle"
+              android:tag="KEY_1" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button04" android:text="@string/ir_txt_04" style="@style/AppButtonStyle"
+              android:tag="KEY_2" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button05" android:text="@string/ir_txt_05" style="@style/AppButtonStyle"
+              android:tag="KEY_3" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button06" android:text="@string/ir_txt_06" style="@style/AppButtonStyle"
+              android:tag="KEY_4" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button07" android:text="@string/ir_txt_07" style="@style/AppButtonStyle"
+              android:tag="KEY_5" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button08" android:text="@string/ir_txt_08" style="@style/AppButtonStyle"
+              android:tag="KEY_6" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button09" android:text="@string/ir_txt_09" style="@style/AppButtonStyle"
+              android:tag="KEY_7" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button10" android:text="@string/ir_txt_10" style="@style/AppButtonStyle"
+              android:tag="KEY_8" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button11" android:text="@string/ir_txt_11" style="@style/AppButtonStyle"
+              android:tag="KEY_9" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button12" android:text="@string/ir_txt_12" style="@style/AppButtonStyle"
+              android:tag="KEY_UNK" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button13" android:text="@string/ir_txt_13" style="@style/AppButtonStyle"
+              android:tag="KEY_0" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button14" android:text="@string/ir_txt_14" style="@style/AppButtonStyle"
+              android:tag="KEY_UNK" android:background="@drawable/button_blue" />
+
+      <TextView android:layout_column="1" android:layout_columnSpan="2" />
+
+      <Button android:id="@+id/button15" android:text="@string/ir_txt_15" style="@style/AppButtonStyle"
+              android:tag="KEY_UP" android:background="@drawable/button_yellow"
+              android:layout_column="1" android:layout_columnSpan="2" />
+      <Button android:id="@+id/button16" android:text="@string/ir_txt_16" style="@style/AppButtonStyle"
+              android:tag="KEY_LEFT" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button17" android:text="@string/ir_txt_17" style="@style/AppButtonStyle"
+              android:tag="KEY_SELECT" android:background="@drawable/button_green" />
+      <Button android:id="@+id/button18" android:text="@string/ir_txt_18" style="@style/AppButtonStyle"
+              android:tag="KEY_RIGHT" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button19" android:text="@string/ir_txt_19" style="@style/AppButtonStyle"
+              android:tag="KEY_DOWN" android:background="@drawable/button_yellow"
+              android:layout_column="1" android:layout_columnSpan="2"  />
+
+      <TextView android:layout_column="1" android:layout_columnSpan="2" />
+
+      <Button android:id="@+id/button20" android:text="@string/ir_txt_20" style="@style/AppButtonStyle"
+              android:tag="KEY_EPG" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button21" android:text="@string/ir_txt_21" style="@style/AppButtonStyle"
+              android:tag="KEY_INFO" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button22" android:text="@string/ir_txt_22" style="@style/AppButtonStyle"
+              android:tag="KEY_MENU" android:background="@drawable/button_purple" />
+      <Button android:id="@+id/button23" android:text="@string/ir_txt_23" style="@style/AppButtonStyle"
+              android:tag="KEY_VOLUMEUP" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button24" android:text="@string/ir_txt_24" style="@style/AppButtonStyle"
+              android:tag="KEY_MUTE" android:background="@drawable/button_red" />
+      <Button android:id="@+id/button25" android:text="@string/ir_txt_25" style="@style/AppButtonStyle"
+              android:tag="KEY_CHANNELUP" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button26" android:text="@string/ir_txt_26" style="@style/AppButtonStyle"
+              android:tag="KEY_VOLUMEDOWN" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button27" android:text="@string/ir_txt_27" style="@style/AppButtonStyle"
+              android:tag="KEY_BACK" android:background="@drawable/button_green" />
+      <Button android:id="@+id/button28" android:text="@string/ir_txt_28" style="@style/AppButtonStyle"
+              android:tag="KEY_CHANNELDOWN" android:background="@drawable/button_blue" />
+
+      <TextView android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:text="@string/com_msg_7" />
+
+      <Button android:id="@+id/button29" android:text="@string/ir_txt_29" style="@style/AppButtonStyle"
+              android:tag="KEY_REWIND" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button30" android:text="@string/ir_txt_30" style="@style/AppButtonStyle"
+              android:tag="KEY_PLAY" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button31" android:text="@string/ir_txt_31" style="@style/AppButtonStyle"
+              android:tag="KEY_FASTFORWARD" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button32" android:text="@string/ir_txt_32" style="@style/AppButtonStyle"
+              android:tag="KEY_REC" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button33" android:text="@string/ir_txt_33" style="@style/AppButtonStyle"
+              android:tag="KEY_PAUSE" android:background="@drawable/button_yellow" />
+      <Button android:id="@+id/button34" android:text="@string/ir_txt_34" style="@style/AppButtonStyle"
+              android:tag="KEY_STOP" android:background="@drawable/button_yellow" />
+
+      <TextView android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:text="@string/com_msg_8" />
+
+      <Button android:id="@+id/button35" android:text="@string/ir_txt_35" style="@style/AppButtonStyle"
+              android:tag="KEY_F1" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button36" android:text="@string/ir_txt_36" style="@style/AppButtonStyle"
+              android:tag="KEY_F2" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button37" android:text="@string/ir_txt_37" style="@style/AppButtonStyle"
+              android:tag="KEY_F3" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button38" android:text="@string/ir_txt_38" style="@style/AppButtonStyle"
+              android:tag="KEY_F4" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button39" android:text="@string/ir_txt_39" style="@style/AppButtonStyle"
+              android:tag="KEY_F5" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button40" android:text="@string/ir_txt_40" style="@style/AppButtonStyle"
+              android:tag="KEY_F6" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button41" android:text="@string/ir_txt_41" style="@style/AppButtonStyle"
+              android:tag="KEY_F7" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button42" android:text="@string/ir_txt_42" style="@style/AppButtonStyle"
+              android:tag="KEY_F8" android:background="@drawable/button_blue" />
+      <Button android:id="@+id/button43" android:text="@string/ir_txt_43" style="@style/AppButtonStyle"
+              android:tag="KEY_F9" android:background="@drawable/button_blue" />
+
+    </GridLayout>
+</ScrollView>

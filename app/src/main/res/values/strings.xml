@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+~ Copyright 2014 Lukasz Skalski <lukasz.skalski@op.pl>
+~
+~ This file is part of Raspberry Control.
+~
+~ Raspberry Control is free software: you can redistribute it and/or modify
+~ it under the terms of the GNU General Public License as published by
+~ the Free Software Foundation, either version 3 of the License, or
+~ (at your option) any later version.
+~
+~ Raspberry Control is distributed in the hope that it will be useful,
+~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~ GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License
+~ along with Raspberry Control.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <!-- Common messages -->
+
+    <string name="com_msg_1">"Reconnect"</string>
+    <string name="com_msg_2">"To exit press the 'Exit' button"</string>
+    <string name="com_msg_3">"Message from server: "</string>
+    <string name="com_msg_4">"Unknown"</string>
+    <string name="com_msg_5">"Confirm"</string>
+    <string name="com_msg_6">"Cancel"</string>
+    <string name="com_msg_7">"Multimedia Keys"</string>
+    <string name="com_msg_8">"Function Keys"</string>
+    <string name="com_msg_9">"Raspberry Pi GPIO - pinout"</string>
+    <string name="com_msg_10">"Error"</string>
+
+    <!-- Error messages -->
+
+    <string name="error_msg_1">"Connection lost"</string>
+    <string name="error_msg_2">"Received JSON object is not valid - please report a bug"</string>
+    <string name="error_msg_3">"No connection to the server - please use 'Reconnect' button"</string>
+    <string name="error_msg_4">"Server does not respond - please try once again"</string>
+    <string name="error_msg_5">"You are already connected to the server"</string>
+    <string name="error_msg_6">"No connection to the server - please check your network settings and server status"</string>
+    <string name="error_msg_7">"Cannot find 1-wire temperature sensors"</string>
+    <string name="error_msg_8">"Cannot find GPIO exported to userspace"</string>
+    <string name="error_msg_9">"No items on the processes list - please report a bug"</string>
+    <string name="error_msg_10">"The device name is not set - please check application settings"</string>
+    <string name="error_msg_11">"Cannot connect to stream server - streaming URL is not valid, please check application settings"</string>
+
+    <!-- MainMenu -->
+
+    <string-array name="mainmenu_options">
+        <item>"GPIO Control"</item>
+        <item>"Temperature Sensors"</item>
+        <item>"Processes Management"</item>
+        <item>"Monitor System Resources"</item>
+        <item>"Terminal Emulator"</item>
+        <item>"IR Remote Control"</item>
+        <item>"Webcam Surveillance"</item>
+        <item>"Settings"</item>
+        <item>"About 'Raspberry Control'"</item>
+        <item>"Open Source Licenses"</item>
+        <item>"Exit"</item>
+    </string-array>
+
+    <string-array name="mainmenu_descriptions">
+        <item>"Display list and manage the on-board GPIO exported to userspace"</item>
+        <item>"Read data from all temperature sensors connected to 1-Wire bus"</item>
+        <item>"Display and manage list of processes running on the server"</item>
+        <item>"Monitor selected server parameters, e.g. SWAP usage, CPU load or utilization, ..."</item>
+        <item>"Control and manage the remote server through command line interface"</item>
+        <item>"Control your Infrared Devices (TV, HVAC systems and more)"</item>
+        <item>"Display a live camera preview with built-in MJPG stream client"</item>
+        <item>"Configure the application according to personal preferences"</item>
+        <item>"Display additional info about the 'Raspberry Control' application"</item>
+        <item>"Show list of licenses for all OpenSource components used to build this application"</item>
+        <item>"Disconnect and close application. Use HOME button to minimize application"</item>
+    </string-array>
+
+    <!-- Settings -->
+
+    <string name="settings_msg_1">"General settings"</string>
+    <string name="settings_msg_2">"Disable splash screen"</string>
+    <string name="settings_msg_3">"Disable splash screen and go directly to login screen on launch"</string>
+
+    <string name="settings_msg_4">"Notifications"</string>
+    <string name="settings_msg_5">"Disable notifications"</string>
+    <string name="settings_msg_6">"Disable all notifications from server"</string>
+    <string name="settings_msg_7">"Disable multiple notifications"</string>
+    <string name="settings_msg_8">"Show only the last received notification"</string>
+
+    <string name="settings_msg_9">"Terminal Emulator settings"</string>
+    <string name="settings_msg_10">"Shellinabox daemon port number"</string>
+    <string name="settings_msg_11">"Set the shellinabox daemon port number"</string>
+    <string name="settings_msg_12">"Set the shellinabox daemon port number"</string>
+    <string name="settings_msg_13">"Terminal Emulator font size"</string>
+    <string name="settings_msg_14">"Set font size in Terminal Emulator"</string>
+
+    <string name="settings_msg_15">"IR Remote Control settings"</string>
+    <string name="settings_msg_16">"Set the Infrared device name"</string>
+    <string name="settings_msg_17">"Set the Infrared device name based on the lircd.conf file\n\nExample:\nSAMSUNG_AA59-00600A"</string>
+    <string name="settings_msg_18">"Set the Infrared device name based on the lircd.conf file"</string>
+
+    <string name="settings_msg_19">"Webcam Surveillance settings"</string>
+    <string name="settings_msg_20">"MJPG-stream server address"</string>
+    <string name="settings_msg_21">"Set up MJPG-stream server address\n\nExample:\nhttp://192.168.0.2:8082/?action=stream"</string>
+    <string name="settings_msg_22">"Set up MJPG-stream server address"</string>
+    <string name="settings_msg_23">"Show FPS label"</string>
+    <string name="settings_msg_24">"Show/hide FPS label on camera preview"</string>
+
+    <!-- TempSensors -->
+
+    <string name="tempsensor_label_1">"Sensor ID: "</string>
+    <string name="tempsensor_label_2">"Temperature: "</string>
+    <string name="tempsensor_label_3">"CRC: "</string>
+
+    <!-- ResourcesMonitor -->
+
+    <string name="resources_label_1">"SYSTEM INFORMATION"</string>
+    <string name="resources_label_1_1">"Kernel: "</string>
+    <string name="resources_label_1_2">"Uptime: "</string>
+    <string name="resources_label_1_3">"Serial No.: "</string>
+    <string name="resources_label_1_4">"MAC Address: "</string>
+
+    <string name="resources_label_2">"FILE SYSTEM"</string>
+    <string name="resources_label_2_1">"Used space: "</string>
+    <string name="resources_label_2_2">"Free space: "</string>
+
+    <string name="resources_label_3">"MEMORY AND SWAP"</string>
+    <string name="resources_label_3_1">"RAM Usage: "</string>
+    <string name="resources_label_3_2">"SWAP Usage: "</string>
+
+    <string name="resources_label_4">"CPU USAGE"</string>
+    <string name="resources_label_4_1">"Avg. Load: "</string>
+    <string name="resources_label_4_2">"CPU Temp.: "</string>
+    <string name="resources_label_4_3">"CPU Usage: "</string>
+
+    <!-- Login -->
+
+    <string name="login_ip">"Host Name or IP Address:"</string>
+    <string name="login_port">"Port:"</string>
+    <string name="login_timeout">"Timeout:"</string>
+    <string name="login_btn_conect">"Connect"</string>
+
+    <!-- Processes -->
+
+    <string name="processes_msg_1">"Are you sure you want to kill this process?"</string>
+    <string name="processes_msg_2">"Kill process: "</string>
+
+    <!-- RemoteControl -->
+
+    <string name="ir_msg_1">"Please assign new function to this button:"</string>
+    <string name="ir_msg_2">"Assign new function"</string>
+
+    <!-- Webcam -->
+
+    <string name="webcam_msg_1">"DEMO\n\nThe streaming URL is not valid - please check application settings"</string>
+    <string name="webcam_msg_2">"Connected to:\n\n"</string>
+    <string name="webcam_msg_3">"\n\nIf you are getting only black screen, please check the streaming URL once again"</string>
+
+    <!-- Processes (don't translate this part) -->
+
+    <string name="processes_label_1">"PID: "</string>
+    <string name="processes_label_2">"USER: "</string>
+
+    <!-- RemoteControl (don't translate this part) -->
+
+    <string name="ir_txt_00">TXT</string>
+    <string name="ir_txt_01">HELP</string>
+    <string name="ir_txt_02">PWR</string>
+    <string name="ir_txt_03">1</string>
+    <string name="ir_txt_04">2</string>
+    <string name="ir_txt_05">3</string>
+    <string name="ir_txt_06">4</string>
+    <string name="ir_txt_07">5</string>
+    <string name="ir_txt_08">6</string>
+    <string name="ir_txt_09">7</string>
+    <string name="ir_txt_10">8</string>
+    <string name="ir_txt_11">9</string>
+    <string name="ir_txt_12">*</string>
+    <string name="ir_txt_13">0</string>
+    <string name="ir_txt_14">#</string>
+    <string name="ir_txt_15">UP</string>
+    <string name="ir_txt_16">LEFT</string>
+    <string name="ir_txt_17">OK</string>
+    <string name="ir_txt_18">RIGHT</string>
+    <string name="ir_txt_19">DOWN</string>
+    <string name="ir_txt_20">EPG</string>
+    <string name="ir_txt_21">INFO</string>
+    <string name="ir_txt_22">MENU</string>
+    <string name="ir_txt_23">V+</string>
+    <string name="ir_txt_24">MUTE</string>
+    <string name="ir_txt_25">CH+</string>
+    <string name="ir_txt_26">V-</string>
+    <string name="ir_txt_27">BACK</string>
+    <string name="ir_txt_28">CH-</string>
+    <string name="ir_txt_29">REW</string>
+    <string name="ir_txt_30">PLAY</string>
+    <string name="ir_txt_31">FF</string>
+    <string name="ir_txt_32">REC</string>
+    <string name="ir_txt_33">||</string>
+    <string name="ir_txt_34">STOP</string>
+    <string name="ir_txt_35">F1</string>
+    <string name="ir_txt_36">F2</string>
+    <string name="ir_txt_37">F3</string>
+    <string name="ir_txt_38">F4</string>
+    <string name="ir_txt_39">F5</string>
+    <string name="ir_txt_40">F6</string>
+    <string name="ir_txt_41">F7</string>
+    <string name="ir_txt_42">F8</string>
+    <string name="ir_txt_43">F9</string>
+
+    <!-- Other (don't translate this part) -->
+
+    <string name="app_name">"Raspberry Control"</string>
+    <string name="splash_title_1">"                              "</string>
+    <string name="splash_title_2">"                              "</string>
+    <string name="image_desc">"Logo"</string>
+
+    <string-array name="terminal_fontsize">
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
+</resources>
