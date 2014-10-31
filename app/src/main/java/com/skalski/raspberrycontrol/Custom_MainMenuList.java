@@ -33,7 +33,7 @@ public class Custom_MainMenuList extends ArrayAdapter <String> {
 	private final Integer[] custom_mainmenu_icon;
 	private final String[]  custom_mainmenu_title;
 	private final String[]  custom_mainmenu_description;
-	
+
 	/*
 	 * Custom_MainMenuList()
 	 */
@@ -45,24 +45,24 @@ public class Custom_MainMenuList extends ArrayAdapter <String> {
 		this.custom_mainmenu_title = mainmenu_title;
 		this.custom_mainmenu_description = mainmenu_description;
 	}
-	
+
 	/*
 	 * getView()
 	 */
 	@Override
 	public View getView (int position, View view, ViewGroup parent) {
-		
+
 		LayoutInflater inflater = custom_mainmenu_context.getLayoutInflater();
 		View rowView= inflater.inflate(R.layout.custom_mainmenulist, null, true);
-		
+
 		ImageView mainmenu_icon = (ImageView) rowView.findViewById(R.id.mainmenu_icon);
 		TextView mainmenu_title = (TextView) rowView.findViewById(R.id.mainmenu_title);
 		TextView mainmenu_description = (TextView) rowView.findViewById(R.id.mainmenu_description);
-		
+
 		mainmenu_icon.setImageResource(custom_mainmenu_icon[position]);
 		mainmenu_title.setText(custom_mainmenu_title[position]);
 		mainmenu_description.setText(custom_mainmenu_description[position]);
-		
+
 		return rowView;
 	}
 }

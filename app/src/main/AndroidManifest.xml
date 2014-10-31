@@ -41,17 +41,17 @@
             </intent-filter>
         </activity>
 
-        <activity 
+        <activity
             android:name="com.skalski.raspberrycontrol.Activity_Login"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" >
         </activity>
-        
+
         <activity
             android:name="com.skalski.raspberrycontrol.Activity_MainMenu"
             android:theme="@style/TransparentTheme">
         </activity>
-        
+
         <activity
             android:name="com.skalski.raspberrycontrol.Activity_ReadMe"
             android:theme="@android:style/Theme.Dialog" >

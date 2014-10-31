@@ -29,7 +29,7 @@ public class SecureWebSockets_WebSocketMessage {
 
 	public static class WebSocketCloseCode {
 		public static final int NORMAL = 1000;
-		public static final int ENDPOINT_GOING_AWAY = 1001;		 
+		public static final int ENDPOINT_GOING_AWAY = 1001;
 		public static final int ENDPOINT_PROTOCOL_ERROR = 1002;
 		public static final int ENDPOINT_UNSUPPORTED_DATA_TYPE = 1003;
 		public static final int RESERVED = 1004;

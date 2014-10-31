@@ -9,7 +9,7 @@ public class SecureWebSockets_WebSocketFrameHeader {
 	private int mPayloadLen;
 	private int mTotalLen;
 	private byte[] mMask;
-	
+
 	public int getOpcode() {
 		return mOpcode;
 	}

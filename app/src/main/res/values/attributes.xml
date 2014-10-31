@@ -20,11 +20,11 @@
 -->
 
 <resources>
-    
+
     <!-- SpotLight -->
     <declare-styleable name="Custom_SpotlightView">
         <attr name="target" format="reference" />
         <attr name="mask" format="reference" />
 	</declare-styleable>
-	
+
 </resources>

@@ -24,17 +24,17 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"
 android:fillViewport="true">
-   		  		   		
+
 	<LinearLayout
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:padding="20dip">
 
-		  <TextView 
+		  <TextView
 		      android:layout_width="fill_parent"
-		  	  android:layout_height="wrap_content"
-		  	  android:text="@string/login_ip"/>
+		      android:layout_height="wrap_content"
+		      android:text="@string/login_ip"/>
 
 		  <EditText
 		      android:id="@+id/login_ip"
@@ -47,8 +47,8 @@ android:fillViewport="true">
 
 		  <TextView
 		      android:layout_width="fill_parent"
-		  	  android:layout_height="wrap_content"
-		  	  android:text="@string/login_port"/>
+		      android:layout_height="wrap_content"
+		      android:text="@string/login_port"/>
 
 		  <EditText
 		      android:id="@+id/login_port"
@@ -73,15 +73,15 @@ android:fillViewport="true">
               android:singleLine="true"
               android:inputType="number"/>
 
-		  <Button 
-		      android:id="@+id/login_btn"
-		  	  android:layout_width="wrap_content"
-		  	  android:layout_height="wrap_content"
-		  	  android:layout_marginTop="15dip"
-			  android:layout_gravity="center"		  	  
-		  	  android:text="@string/login_btn_conect"
-        	  android:background="@drawable/button_red"
-              style="@style/AppButtonStyle" />
+		  <Button
+                      android:id="@+id/login_btn"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="15dip"
+                      android:layout_gravity="center"
+                      android:text="@string/login_btn_conect"
+                      android:background="@drawable/button_red"
+                      style="@style/AppButtonStyle" />
 
 	</LinearLayout>
 </ScrollView>

@@ -71,25 +71,25 @@ public class Activity_MainMenu extends Activity {
 	 */
     private int ActionBar_Height;
     private int ActionBar_MinHeaderTranslation;
-    
+
     private View ActionBar_Header;
     private View ActionBar_PlaceHolderView;
     private ImageView ActionBar_HeaderLogo;
-    
+
     private RectF ActionBar_Rect1 = new RectF();
     private RectF ActionBar_Rect2 = new RectF();
     private TypedValue ActionBar_TypedValue = new TypedValue();
-    
+
     private AccelerateDecelerateInterpolator ActionBar_SmoothInterpolator;
     private ActionBar_AlphaForegroundColorSpan ActionBar_AlphaForegroundColorSpan;
     private SpannableString ActionBar_SpannableString;
-    
+
     /*
      * MainMenu variables
      */
     private Custom_WebSocketClient client;
     private ListView MainMenu_ListView;
-    
+
 	private Integer[] menu_icon = {
 			R.drawable.mainmenu_icon_01,
 			R.drawable.mainmenu_icon_02,
@@ -126,7 +126,7 @@ public class Activity_MainMenu extends Activity {
 
         MainMenu_ListView = (ListView) findViewById(R.id.mainmenu_listview);
         ActionBar_Header = findViewById(R.id.mainmenu_header);
-        
+
         ActionBar_HeaderPicture = (ActionBar_KenBurnsView) findViewById(R.id.mainmenu_header_picture);
         ActionBar_HeaderPicture.setResourceIds(R.drawable.mainmenu_picture_00, R.drawable.mainmenu_picture_01);
         ActionBar_HeaderLogo = (ImageView) findViewById(R.id.mainmenu_header_logo);
@@ -142,13 +142,13 @@ public class Activity_MainMenu extends Activity {
 
         MainMenu_ListView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            	            	
+
                 Intent intent;
-                                
+
                 switch (position){
 
-		            	/* GPIO Control */
-		    			case 1:
+                        /* GPIO Control */
+                        case 1:
                             if (client.isConnected()) {
                                 Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_GPIO'");
                                 intent = new Intent(getApplicationContext(), Activity_GPIO.class);
@@ -158,8 +158,8 @@ public class Activity_MainMenu extends Activity {
                             }
                         break;
 
-		    			/* Temperature Sensors */
-		    			case 2:
+                        /* Temperature Sensors */
+                        case 2:
                             if (client.isConnected()) {
                                 Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_TempSensors'");
                                 intent = new Intent(getApplicationContext(), Activity_TempSensors.class);
@@ -167,10 +167,10 @@ public class Activity_MainMenu extends Activity {
                             } else {
                                 toast_connection_error();
                             }
-		    			break;
+                        break;
 
-		    			/* Processes Management */
-		    			case 3:
+                        /* Processes Management */
+                        case 3:
                             if (client.isConnected()) {
                                 Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_Processes'");
                                 intent = new Intent(getApplicationContext(), Activity_Processes.class);
@@ -178,10 +178,10 @@ public class Activity_MainMenu extends Activity {
                             } else {
                                 toast_connection_error();
                             }
-		    			break;
+                        break;
 
-		    			/* Monitor System Resources */
-		    			case 4:
+                        /* Monitor System Resources */
+                        case 4:
                             if (client.isConnected()) {
                                 Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_ResourcesMonitor'");
                                 intent = new Intent(getApplicationContext(), Activity_ResourcesMonitor.class);
@@ -189,9 +189,9 @@ public class Activity_MainMenu extends Activity {
                             } else {
                                 toast_connection_error();
                             }
-		    			break;
+                        break;
 
-		    			/* Terminal Emulator */
+                        /* Terminal Emulator */
                         case 5:
                         if (client.isConnected()) {
                             Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_Terminal'");
@@ -201,9 +201,9 @@ public class Activity_MainMenu extends Activity {
                             toast_connection_error();
                         }
                         break;
-		    			
-		    			/* IR Remote Control */
-		    			case 6:
+
+                        /* IR Remote Control */
+                        case 6:
                             if (client.isConnected()) {
                                 Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_RemoteControl'");
                                 intent = new Intent(getApplicationContext(), Activity_RemoteControl.class);
@@ -211,10 +211,10 @@ public class Activity_MainMenu extends Activity {
                             } else {
                                 toast_connection_error();
                             }
-		    			break;
-		    			
-		    			/* Webcam Surveillance */
-		    			case 7:
+                        break;
+
+                        /* Webcam Surveillance */
+                        case 7:
                             if (client.isConnected()) {
                                 Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_Webcam'");
                                 intent = new Intent(getApplicationContext(), Activity_Webcam.class);
@@ -222,36 +222,36 @@ public class Activity_MainMenu extends Activity {
                             } else {
                                 toast_connection_error();
                             }
-		    			break;
+                        break;
 
-		    			/* Settings */
-		    			case 8:
+                        /* Settings */
+                        case 8:
                             Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_Settings'");
-		    				intent = new Intent(getApplicationContext(), Activity_Settings.class);
-		    				startActivity(intent);
-		    			break;
-		    			
-		    			/* About 'Raspberry Control' */
-		    			case 9:
+                            intent = new Intent(getApplicationContext(), Activity_Settings.class);
+                            startActivity(intent);
+                        break;
+
+                        /* About 'Raspberry Control' */
+                        case 9:
                             Log.i(LOGTAG, LOGPREFIX + "starting 'Activity_ReadMe'");
-		    				intent = new Intent(getApplicationContext(), Activity_ReadMe.class);
-		    				startActivity(intent);
-		    			break;
-		    			
-		    			/* Open Source Licenses */
-		    			case 10:
+                            intent = new Intent(getApplicationContext(), Activity_ReadMe.class);
+                            startActivity(intent);
+                        break;
+
+                        /* Open Source Licenses */
+                        case 10:
                             Log.i(LOGTAG, LOGPREFIX + "starting 'LicensesDialog'");
-		    				new LicensesDialog(Activity_MainMenu.this, R.raw.notices, false, true).show();
-		    			break;
-		
-		    			/* Exit */
-		    			case 11:
-		    				intent = new Intent(getApplicationContext(), Activity_Login.class);
-		    				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		    				intent.putExtra("exit","yes");
-		    				startActivity(intent);
-		    			break;
-                }                
+                            new LicensesDialog(Activity_MainMenu.this, R.raw.notices, false, true).show();
+                        break;
+
+                        /* Exit */
+                        case 11:
+                            intent = new Intent(getApplicationContext(), Activity_Login.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            intent.putExtra("exit","yes");
+                            startActivity(intent);
+                        break;
+                }
             }
         });
     }
@@ -298,23 +298,23 @@ public class Activity_MainMenu extends Activity {
      */
     private void setup_list_view () {
 
-    	ActionBar_PlaceHolderView = getLayoutInflater().inflate(R.layout.noboringactionbar_view_placeholder, MainMenu_ListView, false);
+        ActionBar_PlaceHolderView = getLayoutInflater().inflate(R.layout.noboringactionbar_view_placeholder, MainMenu_ListView, false);
         Custom_MainMenuList adapter = new Custom_MainMenuList(Activity_MainMenu.this, menu_icon,
                                       getResources().getStringArray(R.array.mainmenu_options),
                                       getResources().getStringArray(R.array.mainmenu_descriptions));
-        
+
         MainMenu_ListView.addHeaderView(ActionBar_PlaceHolderView);
         MainMenu_ListView.setAdapter(adapter);
         MainMenu_ListView.setOnScrollListener(new AbsListView.OnScrollListener() {
-        	
+
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
             }
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-            	int scroll_y;
-            	float ratio;
+                int scroll_y;
+                float ratio;
                 scroll_y = get_scroll_y();
                 ActionBar_Header.setTranslationY(Math.max(-scroll_y, ActionBar_MinHeaderTranslation));
                 ratio = clamp(ActionBar_Header.getTranslationY() / ActionBar_MinHeaderTranslation, 0.0f, 1.0f);
@@ -323,7 +323,7 @@ public class Activity_MainMenu extends Activity {
             }
         });
     }
-    
+
     /*
      * Activity_MainMenu - onKeyDown()
      *   Disable BACK button
@@ -365,8 +365,8 @@ public class Activity_MainMenu extends Activity {
      * NoBoringActionBar - set_title_alpha()
      */
     private void set_title_alpha (float alpha) {
-    	ActionBar_AlphaForegroundColorSpan.setAlpha(alpha);
-    	ActionBar_SpannableString.setSpan(ActionBar_AlphaForegroundColorSpan, 0,
+        ActionBar_AlphaForegroundColorSpan.setAlpha(alpha);
+        ActionBar_SpannableString.setSpan(ActionBar_AlphaForegroundColorSpan, 0,
                                           ActionBar_SpannableString.length(),
                                           Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         if (getActionBar() != null)
@@ -384,8 +384,8 @@ public class Activity_MainMenu extends Activity {
      * NoBoringActionBar - interpolate()
      */
     private void interpolate (View view1, View view2, float interpolation) {
-    	get_on_screen_rect (ActionBar_Rect1, view1);
-    	get_on_screen_rect (ActionBar_Rect2, view2);
+        get_on_screen_rect (ActionBar_Rect1, view1);
+        get_on_screen_rect (ActionBar_Rect2, view2);
 
         float scaleX = 1.0F + interpolation * (ActionBar_Rect2.width() / ActionBar_Rect1.width() - 1.0F);
         float scaleY = 1.0F + interpolation * (ActionBar_Rect2.height() / ActionBar_Rect1.height() - 1.0F);
@@ -441,7 +441,7 @@ public class Activity_MainMenu extends Activity {
     }
 
     /*
-     * NoBoringActionBar - get_action_bar_height() 
+     * NoBoringActionBar - get_action_bar_height()
      */
     public int get_action_bar_height () {
         if (ActionBar_Height != 0)

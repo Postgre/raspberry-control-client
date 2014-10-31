@@ -49,7 +49,7 @@ public class Custom_SpotlightView extends View {
 
 	public Custom_SpotlightView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		
+
 		TypedArray a = context.obtainStyledAttributes(attrs,
                                                       R.styleable.Custom_SpotlightView, 0, 0);
 		try {
@@ -104,7 +104,7 @@ public class Custom_SpotlightView extends View {
 		mShaderMatrix.preTranslate(-x, -y);
 
 		mPaint.getShader().setLocalMatrix(mShaderMatrix);
-		
+
 		canvas.translate(x, y);
 		canvas.scale(mMaskScale, mMaskScale);
 		canvas.drawBitmap(mMask, 0.0f, 0.0f, mPaint);

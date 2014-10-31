@@ -254,16 +254,16 @@ public class SecureWebSockets_WebSocketOptions {
    public boolean getMaskClientFrames() {
       return mMaskClientFrames;
    }
-   
+
    /**
     * Set reconnect interval
-    * 
+    *
     * @param reconnectInterval	Interval in ms, 0 - no reconnection
     */
    public void setReconnectInterval(int reconnectInterval) {
 	   mReconnectInterval = reconnectInterval;
    }
-   
+
    public int getReconnectInterval() {
 	   return mReconnectInterval;
    }

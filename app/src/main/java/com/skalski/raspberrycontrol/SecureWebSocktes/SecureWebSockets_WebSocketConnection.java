@@ -115,9 +115,9 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 		} else {
 			Log.d(TAG, "mTransportChannel already NULL");
 		}
-		
+
 		mSocketThread.getHandler().post(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				Looper.myLooper().quit();
@@ -169,7 +169,7 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 	}
 
 	/**
-	 * Reconnect to the server with the latest options 
+	 * Reconnect to the server with the latest options
 	 * @return true if reconnection performed
 	 */
 	public boolean reconnect() {
@@ -191,7 +191,7 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 			}
 		}
 		mSocketThread.getHandler().post(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				mSocketThread.startConnection();
@@ -206,7 +206,7 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 		}
 
 		this.mSocket = mSocketThread.getSocket();
-		
+
 		if (mSocket == null) {
 			onClose(WebSocketCloseNotification.CANNOT_CONNECT, mSocketThread.getFailureMessage());
 		} else if (mSocket.isConnected()) {
@@ -226,7 +226,7 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 
 	/**
 	 * Perform reconnection
-	 * 
+	 *
 	 * @return true if reconnection was scheduled
 	 */
 	protected boolean scheduleReconnect() {
@@ -253,7 +253,7 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 
 	/**
 	 * Common close handler
-	 * 
+	 *
 	 * @param code       Close code.
 	 * @param reason     Close reason (human-readable).
 	 */
@@ -414,7 +414,7 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 
 		public SocketThread(URI uri, SecureWebSockets_WebSocketOptions options) {
 			this.setName(WS_CONNECTOR);
-			
+
 			this.mWebSocketURI = uri;
 		}
 
@@ -425,12 +425,12 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 			synchronized (this) {
 				notifyAll();
 			}
-			
+
 			Looper.loop();
 			Log.d(TAG, "SocketThread exited.");
 		}
 
-		public void startConnection() {	
+		public void startConnection() {
 			try {
 				String host = mWebSocketURI.getHost();
 				int port = mWebSocketURI.getPort();
@@ -442,7 +442,7 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 						port = 80;
 					}
 				}
-				
+
 				SocketFactory factory = null;
 				if (mWebSocketURI.getScheme().equalsIgnoreCase(WSS_URI_SCHEME)) {
 					factory = SSLCertificateSocketFactory.getDefault();
@@ -455,12 +455,12 @@ public class SecureWebSockets_WebSocketConnection implements SecureWebSockets_We
 			} catch (IOException e) {
 				this.mFailureMessage = e.getLocalizedMessage();
 			}
-			
+
 			synchronized (this) {
 				notifyAll();
 			}
 		}
-		
+
 		public void stopConnection() {
 			try {
 				mSocket.close();

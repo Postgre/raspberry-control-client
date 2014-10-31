@@ -41,7 +41,7 @@ import android.util.Log;
  */
 public class SecureWebSockets_WebSocketWriter extends Thread {
 	private static final String TAG = "SecureWebSockets";
-	
+
 	private static final int WEB_SOCKETS_VERSION = 13;
 	private static final String CRLF = "\r\n";
 	private final Random mRandom = new Random();
@@ -58,7 +58,7 @@ public class SecureWebSockets_WebSocketWriter extends Thread {
 		this.mWebSocketConnectionHandler = master;
 		this.mWebSocketOptions = options;
 		this.mSocket = socket;
-		
+
 		this.mApplicationBuffer = ByteBuffer.allocate(options.getMaxFramePayloadSize() + 14);
 
 		Log.d(TAG, "WebSocket writer created.");
@@ -377,14 +377,14 @@ public class SecureWebSockets_WebSocketWriter extends Thread {
 
 	// Thread method overrides
 	@Override
-	public void run() {	
+	public void run() {
 		OutputStream outputStream = null;
 		try {
 			outputStream = mSocket.getOutputStream();
 		} catch (IOException e) {
 			Log.e(TAG, e.getLocalizedMessage());
 		}
-		
+
 		this.mOutputStream = outputStream;
 		Looper.prepare();
 		this.mHandler = new ThreadHandler(this);
