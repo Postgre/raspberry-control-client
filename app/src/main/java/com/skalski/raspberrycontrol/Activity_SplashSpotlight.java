@@ -31,7 +31,7 @@ import android.content.Intent;
 import com.skalski.raspberrycontrol.Custom_SpotlightView.AnimationSetupCallback;
 
 public class Activity_SplashSpotlight extends Activity {
-	
+
 	/*
 	 * SplashSpotlight variables
 	 */
@@ -68,7 +68,7 @@ public class Activity_SplashSpotlight extends Activity {
 	 * SplashSpotlight - createAnimation()
 	 */
 	private void createAnimation (final Custom_SpotlightView spotlight) {
-		
+
 		View top = findViewById(R.id.splash_title_1);
 		View bottom = findViewById(R.id.splash_title_2);
 
@@ -81,7 +81,7 @@ public class Activity_SplashSpotlight extends Activity {
 		spotlight.setMaskY(startY);
 
 		spotlight.animate().alpha(1.0f).withLayer().withEndAction(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				ObjectAnimator moveLeft = ObjectAnimator.ofFloat(spotlight, "maskX", endX, startX);
@@ -113,21 +113,21 @@ public class Activity_SplashSpotlight extends Activity {
 				set.start();
 
 				set.addListener(new AnimatorListener() {
-					
+
 					@Override
 					public void onAnimationStart(Animator animation) {
 					}
-					
+
 					@Override
 					public void onAnimationRepeat(Animator animation) {
 					}
-					
+
 					@Override
 					public void onAnimationEnd(Animator animation) {
 						findViewById(R.id.splash_content).setVisibility(View.VISIBLE);
 						findViewById(R.id.splash_spotlight).setVisibility(View.GONE);
 						getWindow().setBackgroundDrawable(null);
-						
+
 			            new Handler().postDelayed(new Runnable()
 			            {
 			                public void run()
@@ -139,7 +139,7 @@ public class Activity_SplashSpotlight extends Activity {
 			                }
 			            }, SPLASH_DISPLAY_LENGTH);
 					}
-					
+
 					@Override
 					public void onAnimationCancel(Animator animation) {
 					}
@@ -147,7 +147,7 @@ public class Activity_SplashSpotlight extends Activity {
 			}
 		});
 	}
-	
+
     /*
      * SplashSpotlight - onKeyDown()
      *   Disable BACK button
@@ -161,7 +161,7 @@ public class Activity_SplashSpotlight extends Activity {
 
         return true;
     }
-    
+
     /*
      * SplashSpotlight - onBackPressed()
      *   Disable BACK button

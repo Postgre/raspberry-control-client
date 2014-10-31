@@ -163,7 +163,7 @@ public class Mjpeg_View extends SurfaceView implements SurfaceHolder.Callback {
 									}
 								}
 							} catch (IOException e) {
-							    
+
 							}
 						}
 					} finally {

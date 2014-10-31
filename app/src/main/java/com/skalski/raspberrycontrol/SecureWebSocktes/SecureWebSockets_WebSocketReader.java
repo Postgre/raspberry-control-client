@@ -40,7 +40,7 @@ import com.skalski.raspberrycontrol.SecureWebSocktes.SecureWebSockets_WebSocketM
 public class SecureWebSockets_WebSocketReader extends Thread {
 	private static final String TAG = "SecureWebSockets";
 
-	private static enum ReaderState { 
+	private static enum ReaderState {
 		STATE_CLOSED,
 		STATE_CONNECTING,
 		STATE_CLOSING,
@@ -231,7 +231,7 @@ public class SecureWebSockets_WebSocketReader extends Thread {
 						}
 						mFrameHeader.setMask(mask);
 
-						i += 4;						
+						i += 4;
 					} else {
 						mFrameHeader.setMask(null);
 					}
@@ -402,7 +402,7 @@ public class SecureWebSockets_WebSocketReader extends Thread {
 
 	/**
 	 * WebSockets handshake reply from server received, default notifies master.
-	 * 
+	 *
 	 * @param success	Success handshake flag
 	 */
 	protected void onHandshake(boolean success) {
@@ -572,11 +572,11 @@ public class SecureWebSockets_WebSocketReader extends Thread {
 	 * Run the background reader thread loop.
 	 */
 	@Override
-	public void run() {		
+	public void run() {
 		synchronized (this) {
 			notifyAll();
 		}
-		
+
 		InputStream inputStream = null;
 		try {
 			inputStream = mSocket.getInputStream();
@@ -606,7 +606,7 @@ public class SecureWebSockets_WebSocketReader extends Thread {
 				} else {
 					Log.e(TAG, "WebSocketReader read() failed.");
 				}
-				
+
 			} catch (SecureWebSockets_WebSocketException e) {
 				Log.d(TAG, "run() : WebSocketException (" + e.toString() + ")");
 
@@ -619,7 +619,7 @@ public class SecureWebSockets_WebSocketReader extends Thread {
 				notify(new SecureWebSockets_WebSocketMessage.ConnectionLost());
 			} catch (IOException e) {
 				Log.d(TAG, "run() : IOException (" + e.toString() + ")");
-				
+
 				notify(new SecureWebSockets_WebSocketMessage.ConnectionLost());
 			} catch (Exception e) {
 				Log.d(TAG, "run() : Exception (" + e.toString() + ")");

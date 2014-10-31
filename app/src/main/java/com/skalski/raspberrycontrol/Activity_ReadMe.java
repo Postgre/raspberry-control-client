@@ -25,14 +25,14 @@ import android.text.Html;
 import android.widget.TextView;
 
 public class Activity_ReadMe extends Activity {
-	
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_readme);
-        
+
         TextView text_1 = (TextView) findViewById (R.id.dialog_info_text1);
         TextView text_2 = (TextView) findViewById (R.id.dialog_info_text2);
-        
+
         text_1.setText(Html.fromHtml("<b><font color=#aa0000>Raspberry Control ver. 2.0</font></b>" +
                                      "<br><br><center><b><font color=#aa0000>PRE-RELEASE VERSION</font></b></center><br>" +
                                      "<br><center>Control Raspberry Pi with your Android Device</center>"));

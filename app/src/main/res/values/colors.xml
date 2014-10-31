@@ -20,7 +20,7 @@
 -->
 
 <resources>
-    
+
     <!-- Activity_MainMenu -->
     <color name="actionbar_title_color">@android:color/white</color>
 
@@ -29,5 +29,5 @@
     <color name="swipe_color_2">#ffeda61a</color>
     <color name="swipe_color_3">#ff12ffa0</color>
     <color name="swipe_color_4">#ffaa0000</color>
-    
+
 </resources>

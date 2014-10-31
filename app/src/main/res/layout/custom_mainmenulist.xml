@@ -31,13 +31,13 @@
         android:padding="3dip"
         android:layout_alignParentLeft="true"
         android:layout_marginRight="5dip">
- 
+
         <ImageView
             android:id="@+id/mainmenu_icon"
             android:layout_width="62dip"
             android:layout_height="62dip"
             android:contentDescription="@string/image_desc" />
- 
+
     </LinearLayout>
 
     <TextView

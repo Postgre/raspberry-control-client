@@ -39,7 +39,7 @@ public class Mjpeg_InputStream extends DataInputStream {
     private final static int HEADER_MAX_LENGTH = 100;
     private final static int FRAME_MAX_LENGTH = 40000 + HEADER_MAX_LENGTH;
     private int mContentLength = -1;
-	
+
     public static Mjpeg_InputStream read(String url) throws IOException {
         HttpResponse res;
         DefaultHttpClient httpclient = new DefaultHttpClient();
@@ -47,11 +47,11 @@ public class Mjpeg_InputStream extends DataInputStream {
         res = httpclient.execute(new HttpGet(URI.create(url)));
         return new Mjpeg_InputStream(res.getEntity().getContent());
     }
-	
+
     public Mjpeg_InputStream(InputStream in) {
         super(new BufferedInputStream(in, FRAME_MAX_LENGTH));
     }
-	
+
     private int getEndOfSeqeunce(DataInputStream in, byte[] sequence) throws IOException {
         int seqIndex = 0;
         byte c;
@@ -64,7 +64,7 @@ public class Mjpeg_InputStream extends DataInputStream {
         }
         return -1;
     }
-	
+
     private int getStartOfSequence(DataInputStream in, byte[] sequence) throws IOException {
         int end = getEndOfSeqeunce(in, sequence);
         return (end < 0) ? (-1) : (end - sequence.length);
@@ -75,7 +75,7 @@ public class Mjpeg_InputStream extends DataInputStream {
         Properties props = new Properties();
         props.load(headerIn);
         return Integer.parseInt(props.getProperty(CONTENT_LENGTH));
-    }	
+    }
 
     public Bitmap readMjpegFrame() throws IOException {
         mark(FRAME_MAX_LENGTH);
@@ -85,8 +85,8 @@ public class Mjpeg_InputStream extends DataInputStream {
         readFully(header);
         try {
             mContentLength = parseContentLength(header);
-        } catch (NumberFormatException nfe) { 
-            mContentLength = getEndOfSeqeunce(this, EOF_MARKER); 
+        } catch (NumberFormatException nfe) {
+            mContentLength = getEndOfSeqeunce(this, EOF_MARKER);
         }
         reset();
         byte[] frameData = new byte[mContentLength];

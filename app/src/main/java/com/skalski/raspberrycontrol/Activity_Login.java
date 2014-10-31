@@ -54,14 +54,14 @@ public class Activity_Login extends Activity implements OnClickListener {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String exit_status = extras.getString("exit");
-            
+
             if (exit_status.equals("yes")){
                 client = ((Custom_WebSocketClient) getApplicationContext());
                 if (client.isConnected()) {
                     client.disconnect();
                     Log.i (LOGTAG, LOGPREFIX + "client disconnected");
                 }
-            	finish();
+                finish();
             }
         }
 

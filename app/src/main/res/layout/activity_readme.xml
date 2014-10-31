@@ -20,13 +20,13 @@
 -->
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent" 
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_weight="1">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
-        android:layout_width="fill_parent" 
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
 
@@ -39,19 +39,19 @@
             android:contentDescription="@string/image_desc"
             android:src="@drawable/ic_launcher" />
 
-        <TextView 
-            android:id="@+id/dialog_info_text1" 
+        <TextView
+            android:id="@+id/dialog_info_text1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             android:textColor="#FFF"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@id/dialog_info_image"/>
 
-        <TextView 
+        <TextView
             android:id="@+id/dialog_info_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FFF" 
+            android:textColor="#FFF"
             android:layout_below="@id/dialog_info_image"
             android:layout_marginTop="7dip"/>
 

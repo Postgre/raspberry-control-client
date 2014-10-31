@@ -11,8 +11,8 @@ public interface SecureWebSockets_WebSocket {
 	public interface WebSocketConnectionObserver {
 		public static enum WebSocketCloseNotification {
 			NORMAL,
-			CANNOT_CONNECT, 
-			CONNECTION_LOST, 
+			CANNOT_CONNECT,
+			CONNECTION_LOST,
 			PROTOCOL_ERROR,
 			INTERNAL_ERROR,
 			SERVER_ERROR,

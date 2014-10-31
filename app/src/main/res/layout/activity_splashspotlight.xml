@@ -30,11 +30,11 @@
 
     <RelativeLayout
         android:id="@+id/splash_content"
-    	android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-		android:visibility="invisible"
-    	android:background="@drawable/splash_background">
-    	
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@drawable/splash_background">
+
         <TextView
 	        android:id="@+id/splash_title_2"
 	        android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
 	        android:text="@string/splash_title_2"
 	        android:textAppearance="?android:attr/textAppearanceMediumInverse"
 	        android:textSize="24sp" />
-	
+
 	    <TextView
 	        android:id="@+id/splash_title_1"
 	        android:layout_width="wrap_content"
@@ -68,10 +68,10 @@
 
     <com.skalski.raspberrycontrol.Custom_SpotlightView
         android:id="@+id/splash_spotlight"
-    	android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-		android:alpha="0.0"
-    	s:target="@id/splash_content"
-    	s:mask="@drawable/splash_spotmask" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.0"
+        s:target="@id/splash_content"
+        s:mask="@drawable/splash_spotmask" />
 
 </FrameLayout>
