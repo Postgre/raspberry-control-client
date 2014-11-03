@@ -24,14 +24,17 @@ import java.net.URISyntaxException;
 import android.app.Application;
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
 import android.util.Log;
 import com.skalski.raspberrycontrol.SecureWebSocktes.SecureWebSockets_WebSocket;
 import com.skalski.raspberrycontrol.SecureWebSocktes.SecureWebSockets_WebSocketConnection;
 import com.skalski.raspberrycontrol.SecureWebSocktes.SecureWebSockets_WebSocketException;
 import com.skalski.raspberrycontrol.SecureWebSocktes.SecureWebSockets_WebSocketOptions;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -53,6 +56,11 @@ public class Custom_WebSocketClient extends Application implements SecureWebSock
     private String ClientFilter;
     private URI ServerURI;
     private volatile boolean IsConnected = false;
+
+    private boolean ServiceBounded;
+    private Service_TizenGear ServiceGear;
+    private volatile boolean GearIsConnected = false;
+
 
     /*
      * Custom_WebSocketClient - connect()
@@ -212,6 +220,10 @@ public class Custom_WebSocketClient extends Application implements SecureWebSock
                 }
             }
 
+            if (jsonObj.has(TAG_HAN_GPIOSTATE) && GearIsConnected) {
+                ServiceGear.sendToGear (payload);
+            }
+
         } catch (JSONException e) {
             Log.e (LOGTAG, LOGPREFIX + "can't parse JSON object");
         }
@@ -237,4 +249,43 @@ public class Custom_WebSocketClient extends Application implements SecureWebSock
     public void onBinaryMessage (byte[] payload) {
         Log.wtf (LOGTAG, LOGPREFIX + "we didn't expect 'BinaryMessage' Message");
     }
+
+    /*
+     * Custom_WebSocketClient - gearConnect()
+     */
+    public void gearConnect () {
+        Intent mIntent = new Intent(this, Service_TizenGear.class);
+        bindService(mIntent, Service_Connection, BIND_AUTO_CREATE);
+        GearIsConnected = true;
+        Log.i (LOGTAG, LOGPREFIX + "Samsung Gear Connected");
+    }
+
+    /*
+     * Custom_WebSocketClient - gearDisconnect()
+     */
+    public void gearDisconnect () {
+        if( ServiceBounded) {
+            unbindService(Service_Connection);
+            ServiceBounded = false;
+        }
+        GearIsConnected = false;
+        Log.i (LOGTAG, LOGPREFIX + "Samsung Gear Disconnected");
+    }
+
+    /*
+     * Custom_WebSocketClient - ServiceConnection
+     */
+    ServiceConnection Service_Connection = new ServiceConnection() {
+
+        public void onServiceDisconnected(ComponentName name) {
+            ServiceBounded = false;
+            ServiceGear = null;
+        }
+
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            ServiceBounded = true;
+            Service_TizenGear.LocalBinder mLocalBinder = (Service_TizenGear.LocalBinder)service;
+            ServiceGear = mLocalBinder.getService();
+        }
+    };
 }
