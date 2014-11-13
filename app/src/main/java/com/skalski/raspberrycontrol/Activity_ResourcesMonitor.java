@@ -149,8 +149,8 @@ public class Activity_ResourcesMonitor extends Activity {
                         slice.setValue(f_free_space);
                         filesystem_usage_graph.addSlice(slice);
 
-                        used_space_value.setText(Float.toString(f_used_space) + " GB");
-                        free_space_value.setText(Float.toString(f_free_space) + " GB");
+                        used_space_value.setText (String.format("%.3f", f_used_space) + " MB");
+                        free_space_value.setText (String.format("%.3f", f_free_space) + " MB");
 
                         ram_usage_value.setProgress(statistics.getInt(TAG_STAT_RAM_USAGE));
                         ram_usage_value.setText(Integer.toString(statistics.getInt(TAG_STAT_RAM_USAGE)) + "%");
@@ -159,8 +159,8 @@ public class Activity_ResourcesMonitor extends Activity {
                         swap_usage_value.setText(Integer.toString(statistics.getInt(TAG_STAT_SWAP_USAGE)) + "%");
 
                         cpu_load_value.setText(statistics.getString(TAG_STAT_CPU_LOAD));
-                        cpu_temp_value.setText(Integer.toString(statistics.getInt(TAG_STAT_CPU_TEMP)));
-                        cpu_usage_value.setText(Integer.toString(statistics.getInt(TAG_STAT_CPU_USAGE)));
+                        cpu_temp_value.setText(Integer.toString(statistics.getInt(TAG_STAT_CPU_TEMP)) + " \u2103");
+                        cpu_usage_value.setText(Integer.toString(statistics.getInt(TAG_STAT_CPU_USAGE)) + "%");
                     }
 
                 } catch (Exception ex) {
